@@ -1,0 +1,16 @@
+{
+  "name": "Main GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "${env:VITE_GRAPHQL_URL}",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "x-hasura-admin-secret": "${env:VITE_HASURA_ADMIN_SECRET}"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

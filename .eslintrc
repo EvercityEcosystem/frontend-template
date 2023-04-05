@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "prettier",
+    "@feature-sliced"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "fsd-import"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "import/default": "off",
+    "no-unused-vars": "warn",
+    "react/prop-types": "warn",
+    "no-console": "error"
+  }
+}
